@@ -4,10 +4,16 @@ let carouselArr = [];
 
 // Classe Carousel
 class Carousel {
+    constructor(image,title,url){
+        this.image=image;
+        this.title=title;
+        this.url=url;
+    }
     static Start(arr) {
         if (arr && arr.length > 0) {
             Carousel._sequence = 0;
             Carousel._size = arr.length;
+            carouselArr.date=arr;
             Carousel.Next(); // Inicializa o carrossel
             Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000);
         } else {
@@ -45,10 +51,6 @@ class Carousel {
     }
 }
 
-// Adiciona os itens ao carrossel
-carouselArr.push({ image: "img/imagem_1.jpg", title: "Esta é a nova Ranger Ford 2022. Verifique novidades.", link: "lancamento.html" });
-carouselArr.push({ image: "img/imagem_2.jpg", title: "Ford a nossa história", link: "#" });
-carouselArr.push({ image: "img/imagem_3.jpg", title: "Nova Ford Bronco Sport 2022", link: "lancamento.html" });
 
 // Inicializa o carrossel ao carregar a página
 window.onload = function() {

@@ -11,12 +11,22 @@ html {
 }
 
 div#carousel {
-    height: 46vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 5px red; */
+    height: 40vh;
     width: 100%;
-     max-height: 628px;
+    max-height: 100%;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+}
+
+div#carousel img{
+    border: solid 5px blue;
+    height: 30rem;
+    margin-top: 10rem;
 }
 
 div#carousel-title a {
@@ -24,11 +34,14 @@ div#carousel-title a {
 }
 
 div#carousel-title  {
+    border: solid 5px green;
     display: block;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
+    margin-top: 8.5rem;
+
 }
 
 header ul {
