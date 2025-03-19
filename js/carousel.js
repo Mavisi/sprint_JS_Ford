@@ -1,15 +1,10 @@
-
-
 //carousel
 
 //Array storage class
 let carouselArr = [];
 
-
 //class Carousel
 class Carousel {
-
-    
       
     static Start(arr){
         if(arr){
