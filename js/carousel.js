@@ -1,56 +1,42 @@
-
-// Array para armazenar os itens do carrossel
+// Array que armazena os slides do carrossel
 let carouselArr = [];
 
-// Classe Carousel
+// Classe do carrossel
 class Carousel {
-    constructor(image,title,url){
-        this.image=image;
-        this.title=title;
-        this.url=url;
+    constructor(image, title, url) {
+        this.image = image;
+        this.title = title;
+        this.url = url;
     }
+
     static Start(arr) {
         if (arr && arr.length > 0) {
             Carousel._sequence = 0;
             Carousel._size = arr.length;
-            carouselArr.date=arr; //pegar os dados de dentro do metodo estatico
-            Carousel.Next(); // Inicializa o carrossel
-            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000); // setar o tempo em que cada imagem aparece
+            Carousel.Next(); // Inicializa a exibição do primeiro slide
+            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000); // Troca automática a cada 2s
         } else {
-            throw "Method Start need a Array Variable.";
+            throw "Method Start needs an array variable.";
         }
     }
 
     static Next() {
-        const carouselContainer = document.getElementById("carousel");
-        const titleContainer = document.getElementById("carousel-title");
-
-        if (!carouselContainer || !titleContainer) return;
-
-        // Atualiza a imagem e o título
         let item = carouselArr[Carousel._sequence];
-        carouselContainer.innerHTML = "";
+        
+        // Pegando os elementos HTML do carrossel
+        let imgElement = document.getElementById("carousel-image");
+        let titleElement = document.getElementById("carousel-title");
+        
 
-        let img = document.createElement("img");
-        img.src = item.image;
-        img.style.opacity = "1";
-
-        if (item.link !== "#") {
-            let link = document.createElement("a");
-            link.href = item.link;
-            link.appendChild(img);
-            carouselContainer.appendChild(link);
-        } else {
-            carouselContainer.appendChild(img);
+        if (item) {
+            imgElement.src = item.image;
+            imgElement.backgroundSize='cover';
+            titleElement.innerText = item.title;
+            titleElement.innerHTML=`<a href="${item.url}"> ${item.title} </a>`;
         }
-        titleContainer.textContent = item.title;
-        // Avança para a próxima imagem
+
+        // Atualiza o índice para o próximo slide (loop circular)
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+
     }
 }
-
-
-// Inicializa o carrossel ao carregar a página
-window.onload = function() {
-    Carousel.Start(carouselArr);
-};
