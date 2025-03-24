@@ -14,7 +14,7 @@ class Carousel {
             Carousel._sequence = 0;
             Carousel._size = arr.length;
             Carousel.Next(); // Inicializa a exibição do primeiro slide
-            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000); // Troca automática a cada 2s
+            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000);  // Troca automática a cada 2s
         } else {
             throw "Method Start needs an array variable.";
         }
