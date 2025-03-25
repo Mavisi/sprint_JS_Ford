@@ -30,22 +30,27 @@ function GetCarArrPosition(arr, carClass) {
 
 function SetCarToCompare(el, carClass) {
     if (!(carClass instanceof Car)) {
-        throw "You need to set a Car class.";
+        throw "You need to set a Car class."; // pode trocar essas mensagens?
     }
 
-    if (el.checked) {
+    if (el.checked) { // o meu usuario marcou o botão 
         if (carArr.length >= 2) {
             alert("Você só pode comparar dois carros por vez.");
             el.checked = false;
             return;
+
         }
 
         carArr.push(carClass);
     } else {
-        const pos = GetCarArrPosition(carArr, carClass);
-        if (pos >= 0) {
-            carArr.splice(pos, 1);
+        const posicao = GetCarArrPosition(carArr, carClass);
+        if (posicao >= 0) { // se ele achar o nome do carro com a função anterior vai retornar um numero 0 ou maior
+            carArr.splice(posicao, 1); // vamos pegar a posição desse elemento dentro do array e excluir a quantidade que queremos
+                                    // neste caso, apenas 1
+
         }
+
+
     }
 }
 
@@ -68,18 +73,32 @@ function HideCompare() {
 // Atualiza a tabela com os dados dos dois carros selecionados
 function UpdateCompareTable() {
     for (let i = 0; i < 2; i++) {
+       
         const car = carArr[i];
-
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="200">`;
+       
         document.getElementById(`compare_modelo_${i}`).innerText = car.nome;
+       
         document.getElementById(`compare_alturacacamba_${i}`).innerText = car.alturaCacamba + " mm";
+       
         document.getElementById(`compare_alturaveiculo_${i}`).innerText = car.alturaVeiculo + " mm";
+        
         document.getElementById(`compare_alturasolo_${i}`).innerText = car.alturaSolo + " mm";
+       
         document.getElementById(`compare_capacidadecarga_${i}`).innerText = car.capacidadeCarga + " Kg";
+       
         document.getElementById(`compare_motor_${i}`).innerText = car.motor + " litros";
+       
         document.getElementById(`compare_potencia_${i}`).innerText = car.potencia + " cv";
+       
         document.getElementById(`compare_volumecacamba_${i}`).innerText = car.volumeCacamba + " L";
+        
         document.getElementById(`compare_roda_${i}`).innerText = car.roda;
+        
         document.getElementById(`compare_preco_${i}`).innerText = "R$ " + car.preco.toLocaleString('pt-BR');
+ 
+ 
+ 
+ 
     }
 }
