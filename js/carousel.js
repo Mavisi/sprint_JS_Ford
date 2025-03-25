@@ -1,23 +1,17 @@
-
 // Array para armazenar os itens do carrossel
 let carouselArr = [];
 
 // Classe Carousel
 class Carousel {
-    constructor(image,title,url){
-        this.image=image;
-        this.title=title;
-        this.url=url;
-    }
     static Start(arr) {
         if (arr && arr.length > 0) {
             Carousel._sequence = 0;
             Carousel._size = arr.length;
-            carouselArr.date=arr; //pegar os dados de dentro do metodo estatico
+            carouselArr.date=arr;
             Carousel.Next(); // Inicializa o carrossel
-            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000); // setar o tempo em que cada imagem aparece
+            Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000);
         } else {
-            throw "Method Start need a Array Variable.";
+            throw "O método Start precisa de um array válido.";
         }
     }
 
@@ -43,12 +37,13 @@ class Carousel {
         } else {
             carouselContainer.appendChild(img);
         }
+
         titleContainer.textContent = item.title;
+
         // Avança para a próxima imagem
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
     }
 }
-
 
 // Inicializa o carrossel ao carregar a página
 window.onload = function() {
