@@ -3,7 +3,6 @@
 let carArr = [];
 
 class Car {
-   
 
     constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image){
        this.nome=nome;
@@ -40,7 +39,6 @@ function SetCarToCompare(el, carClass) {
             el.checked = false;
             return;
         }
-
         carArr.push(carClass);
     } else {
         const pos = GetCarArrPosition(carArr, carClass);
