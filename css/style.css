@@ -2,8 +2,12 @@
 
 body {
     background: #FFFFFF;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    max-height: 100dvh;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 html {
@@ -24,7 +28,7 @@ div#carousel {
 }
 
 div#carousel img{
-    border: solid 5px blue;
+    /* border: solid 5px blue; */
     height: 30rem;
     margin-top: 10rem;
 }
@@ -34,14 +38,12 @@ div#carousel-title a {
 }
 
 div#carousel-title  {
-    border: solid 5px green;
+    border: solid 5px green; 
     display: block;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10rem;
     margin-bottom: 10px;
     font-weight: bold;
-    margin-top: 8.5rem;
-
 }
 
 header ul {
@@ -94,7 +96,8 @@ nav li {
 }
 
 main {
-    min-height: calc(100% - 167px);
+    flex:1;
+    height: 100%;
 }
 
 nav#social {
@@ -113,7 +116,8 @@ span.redesociais {
 
 footer {
     background: #1B357E;
-    padding: 20px;
+    /* padding: 20px; */
+    
 }
 
 footer div {
@@ -121,6 +125,15 @@ footer div {
     float: right;
     margin-right: 40px;
 }
+
+footer div img {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+    margin-top: 16px;
+    width: 70px;
+}
+
 
 button:hover {
     background: #1b357e;
