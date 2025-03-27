@@ -3,6 +3,9 @@
 
 class contato {
     
+    constructor(  ){
+
+    }
 }
 
 function Post(form) {
