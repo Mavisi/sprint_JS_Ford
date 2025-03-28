@@ -30,8 +30,6 @@ function Post(form) {
 
     Enviar(data.nome); // chama a função que mostra o alert
 
-
-    
     form.reset(); // limpar o meu formulário
 }
 
@@ -46,3 +44,4 @@ function Enviar(nome) {
     }
 
 }
+

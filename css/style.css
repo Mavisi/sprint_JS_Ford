@@ -38,7 +38,7 @@ div#carousel-title a {
 }
 
 div#carousel-title  {
-    border: solid 5px green; 
+    /* border: solid 5px green;  */
     display: block;
     text-align: center;
     margin-top: 10rem;
