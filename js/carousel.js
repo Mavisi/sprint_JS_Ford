@@ -31,7 +31,6 @@ class Carousel {
 
         if (item) { //aqui eu vou att os elementos da pagina
             imgElement.src = item.image;
-            imgElement.style.backgroundSize='cover'; //saber pq não funciona
             titleElement.innerText = item.title;
             titleElement.innerHTML=`<a href="${item.url}"> ${item.title} </a>`; 
         }
