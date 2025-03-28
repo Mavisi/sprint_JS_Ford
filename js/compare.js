@@ -35,7 +35,7 @@ function SetCarToCompare(el, carClass) {
 
     if (el.checked) { // o meu usuario marcou o botão 
         if (carArr.length >= 2) {
-            alert("Você só pode comparar dois carros por vez.");
+            alert("Você só podera comparar dois carros por vez.");
             el.checked = false;
             return;
 
@@ -53,10 +53,10 @@ function SetCarToCompare(el, carClass) {
     }
 }
 
-// Mostra a tabela de comparação
-function ShowCompare() {
+function ShowCompare() { // Mostra a tabela de comparação
+
     if (carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação.");
+        alert("Precisa marcar 2 carros para iniciar a comparação.");
         return;
     }
 
@@ -64,13 +64,13 @@ function ShowCompare() {
     document.getElementById("compare").style.display = "block";
 }
 
-// Oculta a tabela de comparação
-function HideCompare() {
+function HideCompare() { // Oculta a tabela de comparação
+
     document.getElementById("compare").style.display = "none";
 }
 
-// Atualiza a tabela com os dados dos dois carros selecionados
-function UpdateCompareTable() {
+function UpdateCompareTable() { // Atualiza a tabela com os dados dos dois carros selecionados
+
     for (let i = 0; i < 2; i++) {
        
         const car = carArr[i];
@@ -95,9 +95,6 @@ function UpdateCompareTable() {
         document.getElementById(`compare_roda_${i}`).innerText = car.roda;
         
         document.getElementById(`compare_preco_${i}`).innerText = "R$ " + car.preco.toLocaleString('pt-BR');
- 
- 
- 
  
     }
 }

@@ -39,7 +39,7 @@ function Enviar(nome) {
     if (nome) {
         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
         console.log();
-        event.preventDefault(); // obrigado acauâ
+        event.preventDefault(); // obrigado acaua
 
     }
 
