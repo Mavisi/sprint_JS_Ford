@@ -31,12 +31,12 @@ class Carousel {
 
         if (item) { //aqui eu vou att os elementos da pagina
             imgElement.src = item.image;
+            
             titleElement.innerText = item.title;
             titleElement.innerHTML=`<a href="${item.url}"> ${item.title} </a>`; 
         }
 
-        // Atualiza o índice para o próximo slide (loop circular)
-        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
-
+        
+        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size; // Atualiza o índice para o próximo slide (loop circular)
     }
 }
