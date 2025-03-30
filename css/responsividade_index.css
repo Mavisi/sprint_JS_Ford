@@ -4,7 +4,7 @@
     box-sizing: border-box;
 } */
 
-@media(min-width: 1025px) and (max-width:1200px){
+@media(min-width: 1025px) and (max-width:1280px){
     .cabecalho{
         display: flex;
         
@@ -17,17 +17,19 @@
         }
     div#carousel #carousel-image{
         /* border: solid 5px black; */
-        height: 19rem;
-        margin-top: 3rem; 
+        height: 25rem;
+        margin-top: 8rem; 
         /* border: solid 5px blue; */
     } 
 
     div#carousel-title a {
         text-decoration: none;
+        font-style: black
+;
     }
 
     div#carousel-title { 
-        margin-top: 2rem;
+        margin-top: 8rem;
         /* border: solid 5px yellow; */
     }
 
