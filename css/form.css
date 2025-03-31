@@ -47,6 +47,11 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.1);
 }
 
 .titulo {

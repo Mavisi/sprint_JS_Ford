@@ -1,4 +1,17 @@
 
+
+.texto{
+    display: flex;
+    justify-content:center ;
+    
+}
+
+.texto a{
+    text-decoration: none;
+    color: #1351d8;
+    font-weight: 900;
+}
+
 ul.modelcars {
     display: block;
     text-align: center;
