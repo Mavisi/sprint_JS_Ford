@@ -1,5 +1,13 @@
 
+button {
+   
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
 
+button:hover{
+    transform: scale(1.1);
+}
 .texto{
     display: flex;
     justify-content:center ;

@@ -48,6 +48,7 @@ button {
     margin-right: 8px;
     float: right;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover{
