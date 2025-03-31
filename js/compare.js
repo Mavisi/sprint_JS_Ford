@@ -30,7 +30,7 @@ function GetCarArrPosition(arr, carClass) {
 
 function SetCarToCompare(el, carClass) {
     if (!(carClass instanceof Car)) {
-        throw "You need to set a Car class."; // pode trocar essas mensagens?
+        throw "You need to set a Car class."; 
     }
 
     if (el.checked) { // o meu usuario marcou o botão 
