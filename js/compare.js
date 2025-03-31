@@ -71,7 +71,7 @@ function HideCompare() { // Oculta a tabela de comparação
 
 function UpdateCompareTable() { // Atualiza a tabela com os dados dos dois carros selecionados
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) { 
        
         const car = carArr[i];
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="200">`;
