@@ -1,4 +1,25 @@
 
+button {
+   
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+.texto{
+    display: flex;
+    justify-content:center ;
+    
+}
+
+.texto a{
+    text-decoration: none;
+    color: #1351d8;
+    font-weight: 900;
+}
+
 ul.modelcars {
     display: block;
     text-align: center;

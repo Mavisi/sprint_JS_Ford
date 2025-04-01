@@ -34,12 +34,12 @@ function Post(form) {
 }
 
 function Enviar(nome) {
-    var nome =  document.getElementById("name");
+    var nome =  document.getElementById("name"); 
 
     if (nome) {
         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
         console.log();
-        event.preventDefault(); // obrigado acaua
+        event.preventDefault(); 
 
     }
 

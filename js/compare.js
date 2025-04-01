@@ -30,7 +30,7 @@ function GetCarArrPosition(arr, carClass) {
 
 function SetCarToCompare(el, carClass) {
     if (!(carClass instanceof Car)) {
-        throw "You need to set a Car class."; // pode trocar essas mensagens?
+        throw "You need to set a Car class."; 
     }
 
     if (el.checked) { // o meu usuario marcou o botão 
@@ -71,7 +71,7 @@ function HideCompare() { // Oculta a tabela de comparação
 
 function UpdateCompareTable() { // Atualiza a tabela com os dados dos dois carros selecionados
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) { 
        
         const car = carArr[i];
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="200">`;
