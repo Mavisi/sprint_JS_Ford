@@ -11,7 +11,7 @@ class Carousel {
 
     static Start(arr) {
         if (arr && arr.length > 0) {
-            Carousel._sequence = 0; // inicializa o índice do slide
+            Carousel._sequence = 0; // para iniciar ou reiniciar meu carrosel
             Carousel._size = arr.length;
             Carousel.Next(); // Inicializa a exibição do primeiro slide
             Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000);  // Troca automática a cada 2s
