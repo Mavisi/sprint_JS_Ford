@@ -11,7 +11,7 @@ class Carousel {
 
     static Start(arr) {
         if (arr && arr.length > 0) {
-            Carousel._sequence = 0; 
+            Carousel._sequence = 0; // inicializa o índice do slide
             Carousel._size = arr.length;
             Carousel.Next(); // Inicializa a exibição do primeiro slide
             Carousel._interval = setInterval(() => { Carousel.Next(); }, 2000);  // Troca automática a cada 2s
@@ -36,6 +36,7 @@ class Carousel {
             titulo.innerHTML=`<a href="${item.url}"> ${item.title} </a>`; 
         }
 
+        
         
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size; // Atualiza o índice para o próximo slide (loop circular)
     }

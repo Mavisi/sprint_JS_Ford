@@ -21,11 +21,11 @@ class Car {
 
 // search on array if exist carClass returning 1 if not return -1
 function GetCarArrPosition(arr, carClass) {
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].nome  === carClass.nome)
-            return i;
+    for(let i = 0; i < arr.length; i++){ // aqui ele vai percorrer o array de carros
+        if(arr[i].nome  === carClass.nome)// aqui ele vai comparar o nome do carro que eu quero adicionar com o nome do carro que já está no array
+            return i; // aqui ele vai retornar a posição do carro que eu quero adicionar 
     }
-    return -1;
+    return -1;// se ele não encontrar o carro no array ele vai retornar -1
 }
 
 function SetCarToCompare(el, carClass) {
@@ -41,8 +41,8 @@ function SetCarToCompare(el, carClass) {
 
         }
         carArr.push(carClass);
-    } else {
-        const posicao = GetCarArrPosition(carArr, carClass);
+    } else { // se meu usuario desmarcou o botão
+        const posicao = GetCarArrPosition(carArr, carClass);// aqui ele vai procurar o nome do carro dentro do array
         if (posicao >= 0) { // se ele achar o nome do carro com a função anterior vai retornar um numero 0 ou maior
             carArr.splice(posicao, 1); // vamos pegar a posição desse elemento dentro do array e excluir a quantidade que queremos
                                     // neste caso, apenas 1
@@ -71,10 +71,10 @@ function HideCompare() { // Oculta a tabela de comparação
 
 function UpdateCompareTable() { // Atualiza a tabela com os dados dos dois carros selecionados
 
-    for (let i = 0; i < 2; i++) { 
+    for (let i = 0; i < 2; i++) { // aqui ele vai percorrer o array de carros e vai preencher a tabela com os dados
        
-        const car = carArr[i];
-        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="200">`;
+        const car = carArr[i]; // aqui ele vai pegar o carro na posição i do array
+        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" >`;
        
         document.getElementById(`compare_modelo_${i}`).innerText = car.nome;
        
