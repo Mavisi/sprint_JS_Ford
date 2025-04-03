@@ -10,9 +10,12 @@ class contato {
     this.contato = contato;
   }
 }
-
+ 
 function Post(form) {
-  let data = new contato(
+    
+    
+
+    let data = new contato(
     form.elements.namedItem("nome").value,
     form.elements.namedItem("sobrenome").value,
     form.elements.namedItem("email").value,
@@ -48,19 +51,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mascaraCpf.addEventListener("input", function (e) {
     let value = e.target.value.replace(/\D/g, "");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-    e.target.value = value;
+
+    value = value.replace(/(\d{3})(\d)/, "$1.$2");// aqui ele vai colocar o ponto
+    value = value.replace(/(\d{3})(\d)/, "$1.$2"); // aqui ele vai colocar o outro ponto 
+    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // aqui ele vai colocar o traço
+    e.target.value = value; // aqui ele vai colocar o valor no input
   });
 
+
   mascaraTel.addEventListener("input", function (e) {
-    let value = e.target.value.replace(/\D/g, "");
-    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
-    value = value.replace(/(\d{5})(\d)/, "$1-$2");
+    let value = e.target.value.replace(/\D/g, ""); // aqui ele vai tirar tudo que não for número
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2"); // aqui ele vai colocar o parênteses
+    value = value.replace(/(\d{5})(\d)/, "$1-$2"); // aqui ele vai colocar o traço
     e.target.value = value;
   });
 });
+
+
 function Enviar(nome) {
 
   const mascCpf = document.getElementById("cpf").value;
@@ -89,4 +96,6 @@ function Enviar(nome) {
   }
 
   form.reset(); // limpar o meu formulário
+
+  
 }
