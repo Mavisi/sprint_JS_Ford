@@ -20,24 +20,29 @@ class Carousel {
         }
     }
 
-    static Next() {   
+    static Next() {
         // let item = carouselArr[Carousel];  
         let item = carouselArr[Carousel._sequence]; // uso o indice pra saber qual o slide vem a seguir
-        
+
         // Pegando os elementos HTML do carrossel
         let imagem = document.getElementById("carousel-image");
         let titulo = document.getElementById("carousel-title");
-        
+
 
         if (item) { //aqui eu vou att os elementos da pagina
-            imagem.src = item.image;
-            
-            titulo.innerText = item.title;
-            titulo.innerHTML=`<a href="${item.url}"> ${item.title} </a>`; 
+            imagem.style.opacity = 0;
+
+            setTimeout(() => {
+                imagem.src = item.image;
+
+                imagem.style.opacity = 1;
+                titulo.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+            }, 400);
+
         }
 
-        
-        
+
+
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size; // Atualiza o índice para o próximo slide (loop circular)
     }
 }

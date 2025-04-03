@@ -1,4 +1,14 @@
 
+.cabecalho a{
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+    color: #1351d8;
+}
+
+.cabecalho a:hover{
+    transform: scale(2.0);
+    font-size: 1.5rem;
+}
+
 button {
    
     transition: transform 0.2s ease-in-out;
