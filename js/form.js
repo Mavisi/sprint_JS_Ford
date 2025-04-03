@@ -12,7 +12,6 @@ class contato {
 }
 
 function Post(form) {
-
   let data = new contato(
     form.elements.namedItem("nome").value,
     form.elements.namedItem("sobrenome").value,
@@ -40,7 +39,6 @@ function Post(form) {
   console.log(mostrar);
 
   Enviar(data.nome); // chama a função que mostra o alert
-
 }
 
 // máscaras de CPF e telefone ao digitar
@@ -64,14 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 function Enviar(nome) {
-  
 
   const mascCpf = document.getElementById("cpf").value;
+  const mascTel =  document.getElementById("telefone").value;
+  const telNumeros = mascTel.replace(/\D/g, ''); // remove tudo que não é número
+
 
   if (mascCpf.length != 14) {
     alert("ATENÇÃO, CPF FORA DO PADRÃO. Formato esperado: 000.000.000-00");
     return;
   }
+    if (telNumeros.length !== 11) {
+      alert("TELEFONE DIGITADO NÃO EXISTE. Formato esperado: (00) 00000-0000");
+      return;
+    }
 
   var nome = document.getElementById("name");
 
@@ -80,11 +84,9 @@ function Enviar(nome) {
       "Obrigado sr(a) " +
         nome.value +
         " os seus dados foram encaminhados com sucesso"
-        
     );
     console.log();
   }
-  
-  form.reset(); // limpar o meu formulário
 
+  form.reset(); // limpar o meu formulário
 }
