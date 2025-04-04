@@ -41,6 +41,9 @@ main div {
     /* border: solid 1px #cccccc; */
 
 }
+
+
+
 .texto_lgpd{
  
     text-align: justify;
@@ -51,7 +54,14 @@ main div {
 
     
 
-} 
+}
+
+
+.botao_lgpd{
+     display: flex;
+     flex-direction: column;
+     font-size: 13px;
+}
 .forms {
     display: block;
     text-align: center;
