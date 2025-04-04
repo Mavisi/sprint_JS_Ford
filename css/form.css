@@ -7,6 +7,7 @@
     margin: 8px;
     font-size: 13px;
     padding: 5px;
+    /* border: solid 1px black; */
 }
 
 .fordform:hover {
@@ -37,8 +38,20 @@ main div {
     text-align: left;
     padding-top: 30px;
     padding-bottom: 30px;
-}
+    /* border: solid 1px #cccccc; */
 
+}
+.texto_lgpd{
+ 
+    text-align: justify;
+    font-size: 14px;
+    width: 300px;
+   /* text-align: center; */
+    margin-left: 10px;
+
+    
+
+} 
 .forms {
     display: block;
     text-align: center;
