@@ -12,7 +12,12 @@ class contato {
 }
  
 function Post(form) {
-    
+   
+    const aLei = document.getElementById("lgpd");
+    if (!aLei.checked) {
+      alert("Você precisa aceitar os termos de uso e a política de privacidade para enviar seus dados.");
+      return;
+    }
     
 
     let data = new contato(
