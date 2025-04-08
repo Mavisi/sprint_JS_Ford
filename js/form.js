@@ -100,7 +100,7 @@ function Enviar(nome) {
     console.log();
   }
 
-  form.reset(); // limpar o meu formulário
+  form.reset(); // limpa r o meu formulário
 
   
 }
