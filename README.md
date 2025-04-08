@@ -68,7 +68,7 @@ sprint_JS_Ford/
 # 🎯 Como Executar o Projeto
 - Clone o repositório:
 ````
-git clone https://github.com/seu-usuario/sprint_JS_Ford.git
+git clone git@github.com:Mavisi/sprint_JS_Ford.git
 ````
 - Acesse a pasta:
 
