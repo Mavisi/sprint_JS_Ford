@@ -13,11 +13,11 @@ class contato {
  
 function Post(form) {
    
-    const aLei = document.getElementById("lgpd");
-    if (!aLei.checked) {
-      alert("Você precisa aceitar os termos de uso e a política de privacidade para enviar seus dados.");
-      return;
-    }
+    // const aLei = document.getElementById("lgpd");
+    // if (!aLei.checked) {
+    //   alert("Você precisa aceitar os termos de uso e a política de privacidade para enviar seus dados.");
+    //   return;
+    // }
     
 
     let data = new contato(
@@ -53,11 +53,11 @@ function Post(form) {
 document.addEventListener("DOMContentLoaded", function () {
   const mascaraCpf = document.getElementById("cpf");
   const mascaraTel = document.getElementById("telefone");
-  const checkboxLgpd = document.getElementById("lgpd");
+  const aJustica = document.getElementById("lgpd");
   const botaoEnviar = document.getElementById("botao_enviar");
 
-  checkboxLgpd.addEventListener("change", function () {
-    botaoEnviar.disabled = !checkboxLgpd.checked;
+  aJustica.addEventListener("change", function () {
+    botaoEnviar.disabled = !aJustica.checked;
   });
 
   mascaraCpf.addEventListener("input", function (e) {
