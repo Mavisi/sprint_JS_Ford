@@ -1,98 +1,100 @@
 .fordform {
-    display: block;
-    width: 300px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    height: 26px;
-    margin: 8px;
-    font-size: 13px;
-    padding: 5px;
-    /* border: solid 1px black; */
+  display: block;
+  width: 300px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  height: 26px;
+  margin: 8px;
+  font-size: 13px;
+  padding: 5px;
+  /* border: solid 1px black; */
 }
 
 #botao_enviar:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    color: #666;
-    border: none;
-  }
-
-.fordform:hover {
-    outline: none;
-    border: 2px solid #007bff;
-    box-shadow: 2px 2px 5px 3px rgba(0, 0, 255, 0.5);
-
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+  border: none;
 }
 
-select.fordform {
-    width: 310px;
-    height: 36px;
-    color: #807d7d;
+.fordform:hover {
+  outline: none;
+  border: 2px solid #007bff;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 255, 0.5);
+}
+.lgpd {
 
+ background: hsla(210, 90%, 80%, 1);
+
+background: linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9FCCFA", endColorstr="#0974F1", GradientType=1 );
+  border-radius: 10px;
+}
+select.fordform {
+  width: 310px;
+  height: 36px;
+  color: #807d7d;
 }
 
 input:focus-visible {
-    outline: none;
+  outline: none;
 }
 
 select:focus-visible {
-    outline: none;
+  outline: none;
 }
 
 main div {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    /* border: solid 1px #cccccc; */
-
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* border: solid 1px #cccccc; */
 }
 
-
-
-.texto_lgpd{
- 
-    text-align: justify;
-    font-size: 14px;
-    width: 300px;
-   /* text-align: center; */
-    margin-left: 10px;
-
-    
-
+.texto_lgpd {
+  text-align: justify;
+  font-size: 14px;
+  width: 300px;
+  /* text-align: center; */
+  margin-left: 10px;
 }
 
-
-.botao_lgpd{
-     display: flex;
-     flex-direction: column;
-     font-size: 13px;
+.botao_lgpd {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
 }
 .forms {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
+  /* border: solid 1px red; */
 }
 
 h2 {
-    text-align: left;
-    font-weight: 800;
+  text-align: left;
+  font-weight: 800;
 }
-
 
 button {
-    width: 200px;
-    height: 40px;
-    margin-right: 8px;
-    float: right;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
+  width: 200px;
+  height: 40px;
+  margin-right: 8px;
+  float: right;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-button:hover{
-    transform: scale(1.1);
+button:hover {
+  transform: scale(1.1);
 }
 
 .titulo {
-    margin-left: 8px;
+  margin-left: 8px;
 }
