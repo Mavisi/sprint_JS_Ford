@@ -53,6 +53,12 @@ function Post(form) {
 document.addEventListener("DOMContentLoaded", function () {
   const mascaraCpf = document.getElementById("cpf");
   const mascaraTel = document.getElementById("telefone");
+  const checkboxLgpd = document.getElementById("lgpd");
+  const botaoEnviar = document.getElementById("botao_enviar");
+
+  checkboxLgpd.addEventListener("change", function () {
+    botaoEnviar.disabled = !checkboxLgpd.checked;
+  });
 
   mascaraCpf.addEventListener("input", function (e) {
     let value = e.target.value.replace(/\D/g, "");
